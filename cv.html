@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林立 (Lin, Li) - 數位名片</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* --- Flip Card Styles --- */
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1.5rem; /* 24px */
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-lg mx-auto">
+        <!-- Business Card -->
+        <div class="card-container w-full h-[25rem] md:h-96">
+            <div class="card">
+                <!-- Front Side -->
+                <div class="card-face card-front bg-white shadow-2xl p-8 text-center flex flex-col justify-between">
+                    <div>
+                        <!-- Header -->
+                        <div class="mb-4">
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">林立</h1>
+                            <p class="text-xl md:text-2xl text-gray-600">Lin, Li</p>
+                        </div>
+                        <!-- Title -->
+                        <div class="my-6">
+                            <p class="text-lg font-medium text-indigo-600">跨領域數位技術與專案管理</p>
+                            <p class="mt-1 text-sm text-gray-500">2025 全國十大傑出青少年</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-center text-gray-700">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-indigo-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:morgan12907484@gmail.com" class="hover:text-indigo-600 transition-colors">morgan12907484@gmail.com</a>
+                        </div>
+                         <div class="text-xs text-gray-400 mt-8">將滑鼠懸停或點擊以查看更多資訊</div>
+                    </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="card-face card-back bg-gray-800 shadow-2xl p-8 text-white flex flex-col justify-between">
+                    <!-- Motto -->
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-indigo-300">「無限進步」</h3>
+                        <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                            持續學習與挑戰自我，透過跨領域整合能力，推動科技創新與專案管理，為數位時代創造更多價值。
+                        </p>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="mt-6 w-full">
+                        <p class="text-center text-gray-400 mb-4">Follow Me</p>
+                        <div class="space-y-3">
+                             <!-- Instagram Personal -->
+                            <a href="https://www.instagram.com/lilin454/" class="group flex items-center bg-gray-700/50 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-indigo-300"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <span>Instagram (個人)</span>
+                                <span class="ml-auto text-xs text-gray-400 group-hover:text-gray-200">→</span>
+                            </a>
+                             <!-- Instagram Project -->
+                            <a href="https://www.instagram.com/lin_the_dream_pathfinder/" class="group flex items-center bg-gray-700/50 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-indigo-300"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <span>Instagram (圓夢計畫)</span>
+                                <span class="ml-auto text-xs text-gray-400 group-hover:text-gray-200">→</span>
+                            </a>
+                            <!-- Threads -->
+                            <a href="https://www.threads.com/@lin_the_dream_pathfinder" class="group flex items-center bg-gray-700/50 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-3 text-indigo-300"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.363 2.83 8.082 6.737 9.429.21.378.448.74.708 1.085a1 1 0 0 0 1.622-.016C11.552 21.93 12.75 20 12.75 20c.5 0 .91-.186 1.22-.512a8.006 8.006 0 0 0 4.15-4.526A7.96 7.96 0 0 0 22 12c0-5.523-4.477-10-10-10zm-3.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                                <span>Threads (海外圓夢計畫)</span>
+                                <span class="ml-auto text-xs text-gray-400 group-hover:text-gray-200">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Information -->
+        <div class="mt-12 bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+             <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-200 pb-2 mb-6">詳細資訊</h2>
+             
+             <!-- About Section -->
+             <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">關於我</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    我是一名專注於數位技術與專案管理的跨領域人才。在學期間積極參與科技研究、專案開發與競賽，並取得多項專業認證。曾帶領團隊榮獲教育部GoSTEAM自造之星競賽全國季軍、負責2023年臺灣燈會專案，並獲選為113學年度傑出表現市長獎。透過跨領域的整合能力，希望能為未來的數位時代創造更多價值。
+                </p>
+             </div>
+
+             <!-- Experience Section -->
+             <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">主要經歷與成就</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>2025年全國十大傑出青少年</li>
+                    <li>113學年度傑出表現市長獎</li>
+                    <li>2023 GoSteam自造之星大賽 全國季軍</li>
+                    <li>2023 臺灣燈會信義區專案總召</li>
+                    <li>期刊論文錄取第21屆科技教育研究與發展學術研討會</li>
+                    <li>日本筑波 Science Edge 2024 國際科展入選</li>
+                    <li>擔任APCS程式培訓營、數位入門課程講師</li>
+                    <li>二度受訪國立教育廣播電台個人專訪</li>
+                    <li>受邀於台北市政府、教育部論壇分享</li>
+                </ul>
+             </div>
+             
+             <!-- Certifications Section -->
+             <div>
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">專業認證</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
+                    <div class="bg-gray-50 p-3 rounded-lg">Microsoft Office Specialist <strong>Master</strong></div>
+                    <div class="bg-gray-50 p-3 rounded-lg">Adobe Certified Professional <strong>Visual Design</strong></div>
+                    <div class="bg-gray-50 p-3 rounded-lg">Google Certificate Educator</div>
+                    <div class="bg-gray-50 p-3 rounded-lg">Internet and Computing Core Certifications  <strong>Master</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
